@@ -1,0 +1,44 @@
+.form-content-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    border-left: 1px solid lightgrey;
+    margin-left: 12px;
+    padding-left: 20px;
+    padding-right: 12px;
+    margin-bottom: 16px;
+    gap: 30px;
+}
+
+.form-content-2 section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+@media (min-width: 900px) {
+    .form-content-2 section {
+        flex-direction: row;
+    }
+    .name-div,
+    .position-div,
+    .email-div,
+    .re-enter-div,
+    .mobile-div {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-content-2 section {
+        flex-direction: column; /* Ensure this remains */
+    }
+    .name-div,
+    .position-div,
+    .email-div,
+    .re-enter-div,
+    .mobile-div {
+        width: 100%;
+    }
+}

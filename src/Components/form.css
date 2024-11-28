@@ -1,0 +1,74 @@
+.sme-health-form{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 15px;
+    min-height: 100vh;
+    padding: 48px;
+}
+.form-heading-div1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+   -webkit-box-align: center;
+   text-align: left;
+   padding: 8px 0px;
+   margin-bottom: 16px;
+}
+.form-heading1{
+    background-color: rgb(96, 26, 121);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 8px;
+    flex: 1;
+   }
+
+@media (min-width: 900px) {
+    .form-heading1{
+        font-size: 20px;
+    }
+    .sme-health-form{
+        padding: 48px; 
+    }
+    .company-text-field-div1,.company-text-field-div2{
+              width: 45%;
+           }
+           .form-content-1{
+            flex-direction: row;
+        }
+   }
+
+@media (max-width: 600px) {
+    .form-heading1{
+        font-size: 16px;
+    }
+    .sme-health-form{
+        padding: 12px; 
+    }
+    .form-content-1{
+        flex-direction: column;
+    }
+    .company-text-field-div1,.company-text-field-div2{
+              width: 100%;
+           }
+}
+
+.form-content-1{
+   width: 100%;
+   min-height:100px;
+   display: flex;
+   justify-content: space-between;
+   -webkit-box-align: center;
+   text-align: left;
+   margin-left: 12px;
+   padding-left:20px;
+   padding-right: 12px;
+   margin-bottom: 16px;
+   gap:8px;
+  border-left: 1px solid lightgrey;
+ 
+}
+
+.company-text-field-div1,.company-text-field-div2{
+    height:auto;   
+       }
