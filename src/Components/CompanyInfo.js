@@ -35,7 +35,7 @@ export default function CompanyInfo({ companyUEN, setCompanyUEN, companyName, se
           value={formik.values.companyUEN}
           onChange={(e) => {
             formik.handleChange(e);
-            setCompanyUEN(e.target.value); // Update parent state
+            setCompanyUEN(e.target.value); 
           }}
           onBlur={formik.handleBlur}
           error={formik.touched.companyUEN && !!formik.errors.companyUEN}
@@ -51,7 +51,7 @@ export default function CompanyInfo({ companyUEN, setCompanyUEN, companyName, se
           value={formik.values.companyName}
           onChange={(e) => {
             formik.handleChange(e);
-            setCompanyName(e.target.value); // Update parent state
+            setCompanyName(e.target.value);
           }}
           onBlur={formik.handleBlur}
           error={formik.touched.companyName && !!formik.errors.companyName}

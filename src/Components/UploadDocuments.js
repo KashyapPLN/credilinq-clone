@@ -35,7 +35,6 @@ export default function UploadDocuments({ upload, setSelectedMonths, setUploaded
       const fileSizeInBytes = fileData.length;
       console.log(fileSizeInBytes);
   
-      // Update your state or perform other actions with the file size
     };
     reader.readAsArrayBuffer(file);
   };

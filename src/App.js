@@ -14,17 +14,17 @@ function App() {
           root: {
             "& .MuiOutlinedInput-root": {
               "& fieldset": {
-                borderColor: "gray", // Default border color
+                borderColor: "gray",
               },
               "&.Mui-focused fieldset": {
-                borderColor: "purple", // Focus border color
+                borderColor: "purple", 
               },
             },
             "& .MuiInputLabel-root": {
-              color: "gray", // Default label color
+              color: "gray", 
             },
             "& .MuiInputLabel-root.Mui-focused": {
-              color: "purple", // Focus label color
+              color: "purple", 
             },
           },
         },
@@ -32,9 +32,9 @@ function App() {
       MuiCheckbox: {
         styleOverrides: {
           root: {
-            color: "gray", // Default checkbox color
+            color: "gray", 
             "&.Mui-checked": {
-              color: "purple", // Purple color when checked
+              color: "purple", 
             },
           },
         },

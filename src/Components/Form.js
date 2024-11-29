@@ -38,7 +38,7 @@ export default function Form() {
           
           uploadedFiles.forEach(file => formData.append('uploadedFiles', file));
                  
-          fetch('http://localhost:4000/submit', {
+          fetch('https://credilinq-clone-backend.onrender.com/submit', {
             method: 'POST',
             body: formData,
           })

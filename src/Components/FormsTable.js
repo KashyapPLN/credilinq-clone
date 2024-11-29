@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Paper, Box, Container, Typography, IconButton } from "@mui/material";
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { Paper, Box, Container } from "@mui/material";
+
 import { DataGrid } from "@mui/x-data-grid";
 
 const FormsTable = () => {
   const [formsData, setFormsData] = useState([]);
   const [paginationModel, setPaginationModel] = useState({
     page: 0,
-    pageSize: 3, // Fixed page size
+    pageSize: 10, 
   });
 
   useEffect(() => {
@@ -16,15 +16,14 @@ const FormsTable = () => {
 
   const fetchFormsData = async () => {
     try {
-      const response = await fetch("http://localhost:4000/forms");
+      const response = await fetch("https://credilinq-clone-backend.onrender.com/forms");
       const data = await response.json();
-      setFormsData(data); // Assuming the API returns an array of documents
+      setFormsData(data); 
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  // Map API data to the required structure
   const rows = formsData.map((form, index) => ({
     id: index+1,
     companyUEN: form.companyUEN,
@@ -34,7 +33,7 @@ const FormsTable = () => {
     email: form.email,
   }));
 
-  // Define column structure
+  
   const columns = [
     { field: "id", headerName: "ID", width: 100 },
     { field: "companyUEN", headerName: "Company UEN", width: 150 },
