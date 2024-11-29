@@ -36,6 +36,9 @@
     .conditions-info-div {
         width: 100%;
     }
+    .conditions-info-div{
+      margin-top: 30px;
+    }
 }
 
 .custom-list {

@@ -27,12 +27,17 @@ export default function UploadDocuments({ upload, setSelectedMonths, setUploaded
 
   // Handle file upload
   const handleFileUpload = (event) => {
-    const files = Array.from(event.target.files);
-    const updatedFiles = files.map((file) => ({
-      name: file.name,
-      type: file.type === 'application/pdf' ? 'pdf' : 'other',
-    }));
-    setUploadedFiles((prev) => [...prev, ...updatedFiles]);
+    const file = event.target.files[0];
+  
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const fileData = e.target.result;   
+      const fileSizeInBytes = fileData.length;
+      console.log(fileSizeInBytes);
+  
+      // Update your state or perform other actions with the file size
+    };
+    reader.readAsArrayBuffer(file);
   };
 
   // Handle chip delete
@@ -63,7 +68,7 @@ export default function UploadDocuments({ upload, setSelectedMonths, setUploaded
             multiple
             accept=".pdf"
             style={{ display: 'none' }}
-            onChange={handleFileUpload}
+            onChange={(e)=>handleFileUpload(e)}
           />
           {upload && <div>
             {months.map((month) => (

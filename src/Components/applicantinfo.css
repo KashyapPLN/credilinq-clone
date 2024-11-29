@@ -40,5 +40,6 @@
     .re-enter-div,
     .mobile-div {
         width: 100%;
+        margin-bottom: 20px;
     }
 }

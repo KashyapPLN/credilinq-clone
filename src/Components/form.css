@@ -50,12 +50,12 @@
     }
     .company-text-field-div1,.company-text-field-div2{
               width: 100%;
+              margin-bottom: 20px;
            }
 }
 
 .form-content-1{
    width: 100%;
-   min-height:100px;
    display: flex;
    justify-content: space-between;
    -webkit-box-align: center;
@@ -64,8 +64,7 @@
    padding-left:20px;
    padding-right: 12px;
    margin-bottom: 16px;
-   gap:8px;
-  border-left: 1px solid lightgrey;
+   border-left: 1px solid lightgrey;
  
 }
 
