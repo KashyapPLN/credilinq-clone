@@ -35,7 +35,7 @@ export default function Form() {
           formData.append('position', position);
           formData.append('email', email);
           formData.append('mobile', mobile);
-          
+          uploadedFiles.forEach((file) => console.log(file.name, file.size, file.type));
           uploadedFiles.forEach(file => formData.append('uploadedFiles', file));
                  
           fetch('https://credilinq-clone-backend.onrender.com/submit', {
@@ -45,6 +45,7 @@ export default function Form() {
             .then(response => response.json())
             .then(data => {setMessage(data.message);
               setOpen(true);
+              window.location.reload();
             })
             .catch(error => console.error('Error:', error));
           

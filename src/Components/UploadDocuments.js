@@ -30,10 +30,11 @@ export default function UploadDocuments({ upload, setSelectedMonths, setUploaded
     const files = Array.from(event.target.files);
     const updatedFiles = files.map((file) => ({
       name: file.name,
-      type: file.type === 'application/pdf' ? 'pdf' : 'other',
-    }));
+      type: file.type,
+      size: file.size,
+    }));  
     setUploadedFiles((prev) => [...prev, ...updatedFiles]);
-  };
+  }
 
   // Handle chip delete
   const handleDelete = (fileName) => {
@@ -114,20 +115,20 @@ export default function UploadDocuments({ upload, setSelectedMonths, setUploaded
       <Row>
         <div className='chip-div'>
         {uploadedFiles.map((file) => (
-          <Chip
-            key={file.name}
-            label={file.name}
-            onDelete={() => handleDelete(file.name)}
-            sx={{
-              margin: 1,
-              color: file.type === 'pdf' ? 'green' : 'red',
-              borderColor: file.type === 'pdf' ? 'green' : 'red',
-              borderWidth: 1,
-              borderStyle: 'solid',
-              width:'max-content'
-            }}
-            variant="outlined"
-          />
+         <Chip
+         key={file.name}
+         label={file.name}
+         onDelete={() => handleDelete(file.name)}
+         sx={{
+           margin: 1,
+           color: file.type === 'application/pdf' ? 'green' : 'red', // Check for 'application/pdf'
+           borderColor: file.type === 'application/pdf' ? 'green' : 'red',
+           borderWidth: 1,
+           borderStyle: 'solid',
+           width: 'max-content',
+         }}
+         variant="outlined"
+       />
         ))}
         </div>
       </Row>
